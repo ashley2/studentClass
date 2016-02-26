@@ -7,6 +7,7 @@ function init() {
   $('#addStudent').click(addStudent);
   //only lets click on students
   $('#studentList').on('click', '.student' , clickStudent);
+  $('#studentList').on('click', '.schools', clickSchool);
 
   function addStudent() {
 
@@ -14,43 +15,42 @@ function init() {
     var name = $('#name').val()
 
     var $student = $('<div>').addClass('student');
-    console.log($student);
+
 
     $('#studentList').append($student);
     $student.text(name + age);
 
   }
 
- function clickSchool(event){
+  function clickSchool(event){
+
 
     $('.selected').appendTo($(this));
     $('.selected').removeClass('selected');
 
   }
-
-  function clickCup(event) {
+  function clickStudent(event){
     event.stopPropagation();
     var $this = $(this);
-    //get initial state of this
     var wasSelected = $this.hasClass('selected');
-    $('.cup').removeClass('selected');
+    $('.student').removeClass('selected');
+    //get initial state of this
 
       // remove selected from EVERYTHING
       if (!wasSelected) {
       //if it wasn't selected before, select it
       $this.addClass('selected');
     }
+
+    function pickSchool () {
+
+  
     
+      
+    }
+
 
   }
-
-  function clickStudent(event){
-    var $getter = $this.detach();
-    $getter.append(whichSchool);
-  }
-
-
 }
-
 
 
