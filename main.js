@@ -7,7 +7,9 @@ function init() {
   $('#addStudent').click(addStudent);
   //only lets click on students
   $('#studentList').on('click', '.student' , clickStudent);
-  $('#studentList').on('click', '.schools', clickSchool);
+  $('.schools').on('click', '.student' , clickStudent);
+  $('.schools').click(clickSchool);
+
 
   function addStudent() {
 
@@ -18,12 +20,13 @@ function init() {
 
 
     $('#studentList').append($student);
-    $student.text(name + age);
+    $student.text(`${name} ${age}`)
 
   }
 
   function clickSchool(event){
 
+    console.log('click');
 
     $('.selected').appendTo($(this));
     $('.selected').removeClass('selected');
@@ -41,15 +44,11 @@ function init() {
       //if it wasn't selected before, select it
       $this.addClass('selected');
     }
+  }
 
-    function pickSchool () {
+  function ageAverage (){
 
-  
     
-      
-    }
-
-
   }
 }
 
