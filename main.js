@@ -9,6 +9,7 @@ function init() {
   $('#studentList').on('click', '.student' , clickStudent);
   $('.schools').on('click', '.student' , clickStudent);
   $('.schools').click(clickSchool);
+  $('#startOver').click(startOver);
 
 
   function addStudent() {
@@ -22,6 +23,9 @@ function init() {
     $('#studentList').append($student);
     $student.text(`${name} ${age}`)
 
+    $('#name').val('');
+    $('#age').val('');
+
   }
 
   function clickSchool(event){
@@ -30,7 +34,7 @@ function init() {
     ageAverage();
   }
 
-  
+
   function clickStudent(event){
     event.stopPropagation();
     var $this = $(this);
@@ -47,9 +51,26 @@ function init() {
   
 
   function ageAverage (){
-    console.log('works');
-    $('.schools').each();
 
+    $('.schools').each(function(){
+      var sum = 0;
+      $(this).find('.student').each(function(){
+        var textValue = $(this).text().split(' ');
+        var age = parseInt(textValue[1]);
+
+        sum+=age;
+        // arr.push(sum++);
+        console.log(sum++);
+        // $('.schools').append(sum);
+      })
+    });
+
+
+  }
+
+  function  startOver (){
+
+    location.reload();
   }
 }
 

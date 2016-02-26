@@ -1,26 +1,53 @@
 * {
   font-family: 'Raleway', sans-serif;
-  text-align: center; }
+  text-align: center;
+  color: white; }
+
+body {
+  background-color: #b3ecff; }
 
 #header {
   font-size: 50px;
   margin-bottom: 20px; }
 
 input {
-  display: inline-block; }
+  display: inline-block;
+  color: black; }
 
 #age {
   width: 40px; }
 
-#addStudent {
-  display: inline-block; }
+button {
+  height: 30px;
+  font-size: 15px;
+  display: inline-block;
+  color: #fff;
+  background-color: #6496c8;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #27496d;
+  transition: background-color 1s ease; }
+
+button:hover,
+button.hover {
+  background-color: #417cb8; }
+
+button:active,
+button.active {
+  background-color: #417cb8;
+  box-shadow: 0 5px #27496d;
+  transform: translateY(5px); }
+
+button:focus {
+  outline: none; }
 
 #studentContainer {
   border: 2px solid black;
   height: 300px;
   width: 700px;
   display: inline-block;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: #33ccff; }
 
 #inputHead {
   margin-bottom: 20px; }
@@ -29,7 +56,8 @@ input {
   height: 250px;
   width: 250px;
   border: 2px solid black;
-  display: inline-block; }
+  display: inline-block;
+  background-color: #004d66; }
 
 #schoolContainer {
   display: inline-block; }
@@ -37,12 +65,17 @@ input {
 .student {
   height: 30px;
   width: 80px;
-  border: 2px solid black;
+  border: 2px solid white;
   display: inline-block;
-  margin: 8px; }
+  margin: 8px;
+  color: white;
+  transition: background-color 2s ease; }
+
+.student:hover {
+  background-color: #b3ecff; }
 
 .selected {
-  border: 2px solid red; }
+  border: 2px solid black; }
 
 div {
   vertical-align: top; }
