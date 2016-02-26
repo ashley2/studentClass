@@ -25,13 +25,12 @@ function init() {
   }
 
   function clickSchool(event){
-
-    console.log('click');
-
     $('.selected').appendTo($(this));
     $('.selected').removeClass('selected');
-
+    ageAverage();
   }
+
+  
   function clickStudent(event){
     event.stopPropagation();
     var $this = $(this);
@@ -45,10 +44,12 @@ function init() {
       $this.addClass('selected');
     }
   }
+  
 
   function ageAverage (){
+    console.log('works');
+    $('.schools').each();
 
-    
   }
 }
 

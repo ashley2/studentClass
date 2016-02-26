@@ -43,3 +43,6 @@ input {
 
 .selected {
   border: 2px solid red; }
+
+div {
+  vertical-align: top; }
