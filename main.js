@@ -21,7 +21,7 @@ function init() {
 
 
     $('#studentList').append($student);
-    $student.text(`${name} ${age}`)
+    $student.text(`${name} ${age}`);
 
     $('#name').val('');
     $('#age').val('');
@@ -51,27 +51,72 @@ function init() {
   
 
   function ageAverage (){
+    var sum1 = 0;
+    var sum2 = 0;
+    var sum3 = 0;
 
-    $('.schools').each(function(){
-      var sum = 0;
-      $(this).find('.student').each(function(){
-        var textValue = $(this).text().split(' ');
-        var age = parseInt(textValue[1]);
+    $('#school1').find('.student').each(function(){
+      var textValue = $(this).text().split(' ');
+      var age = parseInt(textValue[1]);
 
-        sum+=age;
-        // arr.push(sum++);
-        console.log(sum++);
-        // $('.schools').append(sum);
-      })
+      sum1+=age;
+      console.log(sum1);
+      $('#studentsSchool1').text(sum1);
+
     });
+    $('#school2').find('.student').each(function(){
+      var textValue = $(this).text().split(' ');
+      var age = parseInt(textValue[1]);
 
+      sum2+=age;
+      console.log(sum2);
+      $('#studentsSchool2').text(sum2);
 
+    });
+    $('#school3').find('.student').each(function(){
+      var textValue = $(this).text().split(' ');
+      var age = parseInt(textValue[1]);
+
+      sum3+=age;
+      console.log(sum3);
+      $('#studentsSchool3').text(sum3);
+
+    });
   }
 
   function  startOver (){
-
     location.reload();
   }
+
+
 }
+     
+
+    // $('.schools').each(function(){
+    //   var sum = 0;
+    //   $(this).find('.student').each(function(){
+    //     var textValue = $(this).text().split(' ');
+    //     var age = parseInt(textValue[1]);
+
+    //     sum+=age;
+    //     // $('.schools').append(sum);
+    //   })
+    // });
+
+
+  // }
+
+  // switch() {
+//     case n:
+//         code block
+//         break;
+//     case n:
+//         code block
+//         break;
+//     default:
+//         default code block
+
+
+
 
 
