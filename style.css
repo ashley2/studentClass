@@ -1,0 +1,45 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  text-align: center; }
+
+#header {
+  font-size: 50px;
+  margin-bottom: 20px; }
+
+input {
+  display: inline-block; }
+
+#age {
+  width: 40px; }
+
+#addStudent {
+  display: inline-block; }
+
+#studentContainer {
+  border: 2px solid black;
+  height: 300px;
+  width: 700px;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+#inputHead {
+  margin-bottom: 20px; }
+
+.schools {
+  height: 250px;
+  width: 250px;
+  border: 2px solid black;
+  display: inline-block; }
+
+#schoolContainer {
+  display: inline-block; }
+
+.student {
+  height: 30px;
+  width: 80px;
+  border: 2px solid black;
+  display: inline-block;
+  margin: 8px; }
+
+.selected {
+  border: 2px solid red; }
